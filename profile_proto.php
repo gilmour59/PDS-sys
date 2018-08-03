@@ -171,7 +171,7 @@
                                 <h3>Educational Background</h3>
                             </div>
                             <div class="col-sm-3 text-right">
-                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#educationalBackground">
+                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#educationalBackgroundModal">
                                     Edit
                                 </button>
                             </div>
@@ -408,8 +408,7 @@
 
                     <div class="modal-body" style="max-height:450px; overflow:auto;">  
                         <div class="div-result">
-                            
-                            <form class="form-horizontal" id="editProductForm" action="php_action/editProduct.php" method="POST">				    
+                            <form class="form-horizontal" id="editEmployeeInfo" action="php_action/editProduct.php" method="POST">				    
                             <br>
                                 <div id="edit-product-messages"></div>
                                 
@@ -454,12 +453,11 @@
                                     </div> <!-- /form-group-->       
                                 </div> <!-- row -->
                             </form>
-                            
                         </div><!--/div-result-->
                     </div> <!-- /modal-body -->
                     <div class="modal-footer">
                         <button type="button" class="btn btn-default" data-dismiss="modal"> <i class="glyphicon glyphicon-remove-sign"></i> Close</button>
-                        <button type="submit" class="btn btn-primary" id="createProductBtn" data-loading-text="Loading..." autocomplete="off"> <i class="glyphicon glyphicon-ok-sign"></i> Save Changes</button>
+                        <button type="submit" class="btn btn-primary" id="editEmployeeInfo" data-loading-text="Loading..." autocomplete="off"> <i class="glyphicon glyphicon-ok-sign"></i> Save Changes</button>
                     </div> <!-- /modal-footer -->	                
                 </div> <!-- /modal-content -->    
             </div> <!-- /modal-dailog -->
@@ -476,28 +474,67 @@
 
                     <div class="modal-body" style="max-height:450px; overflow:auto;">  
                         <div class="div-result">
-                            <form class="form-horizontal" id="editProductForm" action="php_action/editProduct.php" method="POST">				    
+                            <form class="form-horizontal" id="editPersonalInfo" action="php_action/editProduct.php" method="POST">				    
                             <br>
                                 <div id="edit-product-messages"></div>
-                                <div class="form-group">
-                                    <label for="editFirstName" class="col-sm-3 control-label">First Name: </label>
-                                    <div class="col-sm-4">
-                                      <input type="text" class="form-control" id="editFirstName" placeholder="First Name..." name="editFirstName" autocomplete="off">
-                                    </div>
-                                </div> <!-- /form-group-->  
                                 
-                                <div class="form-group">
-                                    <label for="editLastName" class="col-sm-3 control-label">Last Name: </label>
-                                    <div class="col-sm-4">
-                                      <input type="text" class="form-control" id="editLastName" placeholder="Last Name..." name="editLastName" autocomplete="off">
-                                    </div>
-                                </div> <!-- /form-group-->  
+                                <div class="row">
+                                    <div class="col-sm-4 form-group">
+                                        <label for="editFirstName" class="control-label"><b>Date of Birth: </b></label>
+                                        <input type="date" class="form-control" id="editDateBirth" name="editDateBirth" autocomplete="off">
+                                    </div> <!-- /form-group-->  
+                                    
+                                    <div class="col-sm-4 form-group">
+                                        <label for="editPlaceBirth" class="control-label"><b>Place of Birth: </b></label>
+                                        <input type="text" class="form-control" id="editPlaceBirth" placeholder="Place of Birth..." name="editPlaceBirth" autocomplete="off">
+                                    </div> <!-- /form-group-->  
+                                    
+                                    <div class="col-sm-4 form-group">
+                                        <label for="editSex" class="control-label"><b>Sex: </b></label>
+                                        <div>
+                                            <div class="form-check-inline">
+                                                <label class="form-check-label">
+                                                    <input type="radio" class="form-check-input" name="editSex" value="male" checked>Male 
+                                                </label>
+                                            </div>
+                                            <div class="form-check-inline">
+                                                <label class="form-check-label">
+                                                    <input type="radio" class="form-check-input" name="editSex" value="female">Female
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div> <!-- /form-group-->  
+                                </div> <!-- row -->
+                                
+                                <div class="row">
+                                    <div class="col-sm-4 form-group">
+                                        <label for="editEmployeeID" class="control-label"><b>Employee ID: </b></label>
+                                        <input type="text" class="form-control" id="editEmployeeID" placeholder="Employee ID..." name="editEmployeeID" autocomplete="off">
+                                    </div> <!-- /form-group-->  
+                                    
+                                    <div class="col-sm-4 form-group">
+                                        <label for="editContactNumber" class="control-label"><b>Contact Number: </b></label>
+                                        <input type="text" class="form-control" id="editContactNumber" placeholder="Contact Number..." name="editContactNumber" autocomplete="off">
+                                    </div> <!-- /form-group-->       
+                                </div> <!-- row -->
+                                
+                                <div class="row">
+                                    <div class="col-sm-4 form-group">
+                                        <label for="editEmail" class="control-label"><b>Email: </b></label>
+                                        <input type="text" class="form-control" id="editEmail" placeholder="Email..." name="editEmail" autocomplete="off">
+                                    </div> <!-- /form-group-->  
+                                    
+                                    <div class="col-sm-4 form-group">
+                                        <label for="editDepartment" class="control-label"><b>Department: </b></label>
+                                        <input type="text" class="form-control" id="editDepartment" placeholder="Department..." name="editDepartment" autocomplete="off">
+                                    </div> <!-- /form-group-->       
+                                </div> <!-- row -->
                             </form>
                         </div><!--/div-result-->
                     </div> <!-- /modal-body -->
                     <div class="modal-footer">
                         <button type="button" class="btn btn-default" data-dismiss="modal"> <i class="glyphicon glyphicon-remove-sign"></i> Close</button>
-                        <button type="submit" class="btn btn-primary" id="createProductBtn" data-loading-text="Loading..." autocomplete="off"> <i class="glyphicon glyphicon-ok-sign"></i> Save Changes</button>
+                        <button type="submit" class="btn btn-primary" id="editPersonalInfo" data-loading-text="Loading..." autocomplete="off"> <i class="glyphicon glyphicon-ok-sign"></i> Save Changes</button>
                     </div> <!-- /modal-footer -->	                
                 </div> <!-- /modal-content -->    
             </div> <!-- /modal-dailog -->
@@ -514,15 +551,57 @@
 
                     <div class="modal-body" style="max-height:450px; overflow:auto;">  
                         <div class="div-result">
-
-                            
+                            <form class="form-horizontal" id="editPersonalInfo" action="php_action/editProduct.php" method="POST">				    
+                            <br>
+                                <div id="edit-product-messages"></div>
+                                
+                                <div class="row">
+                                    <div class="col-sm-4 form-group">
+                                        <label for="editFirstName" class="control-label"><b>First Name: </b></label>
+                                        <input type="text" class="form-control" id="editFirstName" placeholder="First Name..." name="editFirstName" autocomplete="off">
+                                    </div> <!-- /form-group-->  
+                                    
+                                    <div class="col-sm-4 form-group">
+                                        <label for="editLastName" class="control-label"><b>Last Name: </b></label>
+                                        <input type="text" class="form-control" id="editLastName" placeholder="Last Name..." name="editLastName" autocomplete="off">
+                                    </div> <!-- /form-group-->  
+                                    
+                                    <div class="col-sm-4 form-group">
+                                        <label for="editMiddleName" class="control-label"><b>Middle Name: </b></label>
+                                        <input type="text" class="form-control" id="editLastName" placeholder="Middle Name..." name="editMiddleName" autocomplete="off">
+                                    </div> <!-- /form-group-->  
+                                </div> <!-- row -->
+                                
+                                <div class="row">
+                                    <div class="col-sm-4 form-group">
+                                        <label for="editEmployeeID" class="control-label"><b>Employee ID: </b></label>
+                                        <input type="text" class="form-control" id="editEmployeeID" placeholder="Employee ID..." name="editEmployeeID" autocomplete="off">
+                                    </div> <!-- /form-group-->  
+                                    
+                                    <div class="col-sm-4 form-group">
+                                        <label for="editContactNumber" class="control-label"><b>Contact Number: </b></label>
+                                        <input type="text" class="form-control" id="editContactNumber" placeholder="Contact Number..." name="editContactNumber" autocomplete="off">
+                                    </div> <!-- /form-group-->       
+                                </div> <!-- row -->
+                                
+                                <div class="row">
+                                    <div class="col-sm-4 form-group">
+                                        <label for="editEmail" class="control-label"><b>Email: </b></label>
+                                        <input type="text" class="form-control" id="editEmail" placeholder="Email..." name="editEmail" autocomplete="off">
+                                    </div> <!-- /form-group-->  
+                                    
+                                    <div class="col-sm-4 form-group">
+                                        <label for="editDepartment" class="control-label"><b>Department: </b></label>
+                                        <input type="text" class="form-control" id="editDepartment" placeholder="Department..." name="editDepartment" autocomplete="off">
+                                    </div> <!-- /form-group-->       
+                                </div> <!-- row -->
+                            </form>
                         </div><!--/div-result-->
                     </div> <!-- /modal-body -->
                     <div class="modal-footer">
                         <button type="button" class="btn btn-default" data-dismiss="modal"> <i class="glyphicon glyphicon-remove-sign"></i> Close</button>
                         <button type="submit" class="btn btn-primary" id="createProductBtn" data-loading-text="Loading..." autocomplete="off"> <i class="glyphicon glyphicon-ok-sign"></i> Save Changes</button>
-                    </div> <!-- /modal-footer -->	 
-                                        
+                    </div> <!-- /modal-footer -->	                
                 </div> <!-- /modal-content -->    
             </div> <!-- /modal-dailog -->
         </div><!-- /modal -->
@@ -532,21 +611,63 @@
             <div class="modal-dialog modal-xl">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h4 class="modal-title"><i class="glyphicon glyphicon-plus-sign"></i> Educational Background</h4>
+                        <h4 class="modal-title"><i class="glyphicon glyphicon-plus-sign"></i> Family Background</h4>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                     </div>
 
                     <div class="modal-body" style="max-height:450px; overflow:auto;">  
                         <div class="div-result">
-
-                            
+                            <form class="form-horizontal" id="editPersonalInfo" action="php_action/editProduct.php" method="POST">				    
+                            <br>
+                                <div id="edit-product-messages"></div>
+                                
+                                <div class="row">
+                                    <div class="col-sm-4 form-group">
+                                        <label for="editFirstName" class="control-label"><b>First Name: </b></label>
+                                        <input type="text" class="form-control" id="editFirstName" placeholder="First Name..." name="editFirstName" autocomplete="off">
+                                    </div> <!-- /form-group-->  
+                                    
+                                    <div class="col-sm-4 form-group">
+                                        <label for="editLastName" class="control-label"><b>Last Name: </b></label>
+                                        <input type="text" class="form-control" id="editLastName" placeholder="Last Name..." name="editLastName" autocomplete="off">
+                                    </div> <!-- /form-group-->  
+                                    
+                                    <div class="col-sm-4 form-group">
+                                        <label for="editMiddleName" class="control-label"><b>Middle Name: </b></label>
+                                        <input type="text" class="form-control" id="editLastName" placeholder="Middle Name..." name="editMiddleName" autocomplete="off">
+                                    </div> <!-- /form-group-->  
+                                </div> <!-- row -->
+                                
+                                <div class="row">
+                                    <div class="col-sm-4 form-group">
+                                        <label for="editEmployeeID" class="control-label"><b>Employee ID: </b></label>
+                                        <input type="text" class="form-control" id="editEmployeeID" placeholder="Employee ID..." name="editEmployeeID" autocomplete="off">
+                                    </div> <!-- /form-group-->  
+                                    
+                                    <div class="col-sm-4 form-group">
+                                        <label for="editContactNumber" class="control-label"><b>Contact Number: </b></label>
+                                        <input type="text" class="form-control" id="editContactNumber" placeholder="Contact Number..." name="editContactNumber" autocomplete="off">
+                                    </div> <!-- /form-group-->       
+                                </div> <!-- row -->
+                                
+                                <div class="row">
+                                    <div class="col-sm-4 form-group">
+                                        <label for="editEmail" class="control-label"><b>Email: </b></label>
+                                        <input type="text" class="form-control" id="editEmail" placeholder="Email..." name="editEmail" autocomplete="off">
+                                    </div> <!-- /form-group-->  
+                                    
+                                    <div class="col-sm-4 form-group">
+                                        <label for="editDepartment" class="control-label"><b>Department: </b></label>
+                                        <input type="text" class="form-control" id="editDepartment" placeholder="Department..." name="editDepartment" autocomplete="off">
+                                    </div> <!-- /form-group-->       
+                                </div> <!-- row -->
+                            </form>
                         </div><!--/div-result-->
                     </div> <!-- /modal-body -->
                     <div class="modal-footer">
                         <button type="button" class="btn btn-default" data-dismiss="modal"> <i class="glyphicon glyphicon-remove-sign"></i> Close</button>
                         <button type="submit" class="btn btn-primary" id="createProductBtn" data-loading-text="Loading..." autocomplete="off"> <i class="glyphicon glyphicon-ok-sign"></i> Save Changes</button>
-                    </div> <!-- /modal-footer -->	 
-                                        
+                    </div> <!-- /modal-footer -->	                
                 </div> <!-- /modal-content -->    
             </div> <!-- /modal-dailog -->
         </div><!-- /modal -->
@@ -562,14 +683,57 @@
 
                     <div class="modal-body" style="max-height:450px; overflow:auto;">  
                         <div class="div-result">
-                            
+                            <form class="form-horizontal" id="editPersonalInfo" action="php_action/editProduct.php" method="POST">				    
+                            <br>
+                                <div id="edit-product-messages"></div>
+                                
+                                <div class="row">
+                                    <div class="col-sm-4 form-group">
+                                        <label for="editFirstName" class="control-label"><b>First Name: </b></label>
+                                        <input type="text" class="form-control" id="editFirstName" placeholder="First Name..." name="editFirstName" autocomplete="off">
+                                    </div> <!-- /form-group-->  
+                                    
+                                    <div class="col-sm-4 form-group">
+                                        <label for="editLastName" class="control-label"><b>Last Name: </b></label>
+                                        <input type="text" class="form-control" id="editLastName" placeholder="Last Name..." name="editLastName" autocomplete="off">
+                                    </div> <!-- /form-group-->  
+                                    
+                                    <div class="col-sm-4 form-group">
+                                        <label for="editMiddleName" class="control-label"><b>Middle Name: </b></label>
+                                        <input type="text" class="form-control" id="editLastName" placeholder="Middle Name..." name="editMiddleName" autocomplete="off">
+                                    </div> <!-- /form-group-->  
+                                </div> <!-- row -->
+                                
+                                <div class="row">
+                                    <div class="col-sm-4 form-group">
+                                        <label for="editEmployeeID" class="control-label"><b>Employee ID: </b></label>
+                                        <input type="text" class="form-control" id="editEmployeeID" placeholder="Employee ID..." name="editEmployeeID" autocomplete="off">
+                                    </div> <!-- /form-group-->  
+                                    
+                                    <div class="col-sm-4 form-group">
+                                        <label for="editContactNumber" class="control-label"><b>Contact Number: </b></label>
+                                        <input type="text" class="form-control" id="editContactNumber" placeholder="Contact Number..." name="editContactNumber" autocomplete="off">
+                                    </div> <!-- /form-group-->       
+                                </div> <!-- row -->
+                                
+                                <div class="row">
+                                    <div class="col-sm-4 form-group">
+                                        <label for="editEmail" class="control-label"><b>Email: </b></label>
+                                        <input type="text" class="form-control" id="editEmail" placeholder="Email..." name="editEmail" autocomplete="off">
+                                    </div> <!-- /form-group-->  
+                                    
+                                    <div class="col-sm-4 form-group">
+                                        <label for="editDepartment" class="control-label"><b>Department: </b></label>
+                                        <input type="text" class="form-control" id="editDepartment" placeholder="Department..." name="editDepartment" autocomplete="off">
+                                    </div> <!-- /form-group-->       
+                                </div> <!-- row -->
+                            </form>
                         </div><!--/div-result-->
                     </div> <!-- /modal-body -->
                     <div class="modal-footer">
                         <button type="button" class="btn btn-default" data-dismiss="modal"> <i class="glyphicon glyphicon-remove-sign"></i> Close</button>
                         <button type="submit" class="btn btn-primary" id="createProductBtn" data-loading-text="Loading..." autocomplete="off"> <i class="glyphicon glyphicon-ok-sign"></i> Save Changes</button>
-                    </div> <!-- /modal-footer -->	 
-                                        
+                    </div> <!-- /modal-footer -->	          
                 </div> <!-- /modal-content -->    
             </div> <!-- /modal-dailog -->
         </div><!-- /modal -->
@@ -585,15 +749,57 @@
 
                     <div class="modal-body" style="max-height:450px; overflow:auto;">  
                         <div class="div-result">
-
-                            
+                            <form class="form-horizontal" id="editPersonalInfo" action="php_action/editProduct.php" method="POST">				    
+                            <br>
+                                <div id="edit-product-messages"></div>
+                                
+                                <div class="row">
+                                    <div class="col-sm-4 form-group">
+                                        <label for="editFirstName" class="control-label"><b>First Name: </b></label>
+                                        <input type="text" class="form-control" id="editFirstName" placeholder="First Name..." name="editFirstName" autocomplete="off">
+                                    </div> <!-- /form-group-->  
+                                    
+                                    <div class="col-sm-4 form-group">
+                                        <label for="editLastName" class="control-label"><b>Last Name: </b></label>
+                                        <input type="text" class="form-control" id="editLastName" placeholder="Last Name..." name="editLastName" autocomplete="off">
+                                    </div> <!-- /form-group-->  
+                                    
+                                    <div class="col-sm-4 form-group">
+                                        <label for="editMiddleName" class="control-label"><b>Middle Name: </b></label>
+                                        <input type="text" class="form-control" id="editLastName" placeholder="Middle Name..." name="editMiddleName" autocomplete="off">
+                                    </div> <!-- /form-group-->  
+                                </div> <!-- row -->
+                                
+                                <div class="row">
+                                    <div class="col-sm-4 form-group">
+                                        <label for="editEmployeeID" class="control-label"><b>Employee ID: </b></label>
+                                        <input type="text" class="form-control" id="editEmployeeID" placeholder="Employee ID..." name="editEmployeeID" autocomplete="off">
+                                    </div> <!-- /form-group-->  
+                                    
+                                    <div class="col-sm-4 form-group">
+                                        <label for="editContactNumber" class="control-label"><b>Contact Number: </b></label>
+                                        <input type="text" class="form-control" id="editContactNumber" placeholder="Contact Number..." name="editContactNumber" autocomplete="off">
+                                    </div> <!-- /form-group-->       
+                                </div> <!-- row -->
+                                
+                                <div class="row">
+                                    <div class="col-sm-4 form-group">
+                                        <label for="editEmail" class="control-label"><b>Email: </b></label>
+                                        <input type="text" class="form-control" id="editEmail" placeholder="Email..." name="editEmail" autocomplete="off">
+                                    </div> <!-- /form-group-->  
+                                    
+                                    <div class="col-sm-4 form-group">
+                                        <label for="editDepartment" class="control-label"><b>Department: </b></label>
+                                        <input type="text" class="form-control" id="editDepartment" placeholder="Department..." name="editDepartment" autocomplete="off">
+                                    </div> <!-- /form-group-->       
+                                </div> <!-- row -->
+                            </form>
                         </div><!--/div-result-->
                     </div> <!-- /modal-body -->
                     <div class="modal-footer">
                         <button type="button" class="btn btn-default" data-dismiss="modal"> <i class="glyphicon glyphicon-remove-sign"></i> Close</button>
                         <button type="submit" class="btn btn-primary" id="createProductBtn" data-loading-text="Loading..." autocomplete="off"> <i class="glyphicon glyphicon-ok-sign"></i> Save Changes</button>
-                    </div> <!-- /modal-footer -->	 
-                                        
+                    </div> <!-- /modal-footer -->	              
                 </div> <!-- /modal-content -->    
             </div> <!-- /modal-dailog -->
         </div><!-- /modal -->
@@ -609,15 +815,57 @@
 
                     <div class="modal-body" style="max-height:450px; overflow:auto;">  
                         <div class="div-result">
-
-                            
+                            <form class="form-horizontal" id="editPersonalInfo" action="php_action/editProduct.php" method="POST">				    
+                            <br>
+                                <div id="edit-product-messages"></div>
+                                
+                                <div class="row">
+                                    <div class="col-sm-4 form-group">
+                                        <label for="editFirstName" class="control-label"><b>First Name: </b></label>
+                                        <input type="text" class="form-control" id="editFirstName" placeholder="First Name..." name="editFirstName" autocomplete="off">
+                                    </div> <!-- /form-group-->  
+                                    
+                                    <div class="col-sm-4 form-group">
+                                        <label for="editLastName" class="control-label"><b>Last Name: </b></label>
+                                        <input type="text" class="form-control" id="editLastName" placeholder="Last Name..." name="editLastName" autocomplete="off">
+                                    </div> <!-- /form-group-->  
+                                    
+                                    <div class="col-sm-4 form-group">
+                                        <label for="editMiddleName" class="control-label"><b>Middle Name: </b></label>
+                                        <input type="text" class="form-control" id="editLastName" placeholder="Middle Name..." name="editMiddleName" autocomplete="off">
+                                    </div> <!-- /form-group-->  
+                                </div> <!-- row -->
+                                
+                                <div class="row">
+                                    <div class="col-sm-4 form-group">
+                                        <label for="editEmployeeID" class="control-label"><b>Employee ID: </b></label>
+                                        <input type="text" class="form-control" id="editEmployeeID" placeholder="Employee ID..." name="editEmployeeID" autocomplete="off">
+                                    </div> <!-- /form-group-->  
+                                    
+                                    <div class="col-sm-4 form-group">
+                                        <label for="editContactNumber" class="control-label"><b>Contact Number: </b></label>
+                                        <input type="text" class="form-control" id="editContactNumber" placeholder="Contact Number..." name="editContactNumber" autocomplete="off">
+                                    </div> <!-- /form-group-->       
+                                </div> <!-- row -->
+                                
+                                <div class="row">
+                                    <div class="col-sm-4 form-group">
+                                        <label for="editEmail" class="control-label"><b>Email: </b></label>
+                                        <input type="text" class="form-control" id="editEmail" placeholder="Email..." name="editEmail" autocomplete="off">
+                                    </div> <!-- /form-group-->  
+                                    
+                                    <div class="col-sm-4 form-group">
+                                        <label for="editDepartment" class="control-label"><b>Department: </b></label>
+                                        <input type="text" class="form-control" id="editDepartment" placeholder="Department..." name="editDepartment" autocomplete="off">
+                                    </div> <!-- /form-group-->       
+                                </div> <!-- row -->
+                            </form>
                         </div><!--/div-result-->
                     </div> <!-- /modal-body -->
                     <div class="modal-footer">
                         <button type="button" class="btn btn-default" data-dismiss="modal"> <i class="glyphicon glyphicon-remove-sign"></i> Close</button>
                         <button type="submit" class="btn btn-primary" id="createProductBtn" data-loading-text="Loading..." autocomplete="off"> <i class="glyphicon glyphicon-ok-sign"></i> Save Changes</button>
-                    </div> <!-- /modal-footer -->	 
-                                        
+                    </div> <!-- /modal-footer -->	               
                 </div> <!-- /modal-content -->    
             </div> <!-- /modal-dailog -->
         </div><!-- /modal -->
@@ -633,15 +881,57 @@
 
                     <div class="modal-body" style="max-height:450px; overflow:auto;">  
                         <div class="div-result">
-
-                            
+                            <form class="form-horizontal" id="editPersonalInfo" action="php_action/editProduct.php" method="POST">				    
+                            <br>
+                                <div id="edit-product-messages"></div>
+                                
+                                <div class="row">
+                                    <div class="col-sm-4 form-group">
+                                        <label for="editFirstName" class="control-label"><b>First Name: </b></label>
+                                        <input type="text" class="form-control" id="editFirstName" placeholder="First Name..." name="editFirstName" autocomplete="off">
+                                    </div> <!-- /form-group-->  
+                                    
+                                    <div class="col-sm-4 form-group">
+                                        <label for="editLastName" class="control-label"><b>Last Name: </b></label>
+                                        <input type="text" class="form-control" id="editLastName" placeholder="Last Name..." name="editLastName" autocomplete="off">
+                                    </div> <!-- /form-group-->  
+                                    
+                                    <div class="col-sm-4 form-group">
+                                        <label for="editMiddleName" class="control-label"><b>Middle Name: </b></label>
+                                        <input type="text" class="form-control" id="editLastName" placeholder="Middle Name..." name="editMiddleName" autocomplete="off">
+                                    </div> <!-- /form-group-->  
+                                </div> <!-- row -->
+                                
+                                <div class="row">
+                                    <div class="col-sm-4 form-group">
+                                        <label for="editEmployeeID" class="control-label"><b>Employee ID: </b></label>
+                                        <input type="text" class="form-control" id="editEmployeeID" placeholder="Employee ID..." name="editEmployeeID" autocomplete="off">
+                                    </div> <!-- /form-group-->  
+                                    
+                                    <div class="col-sm-4 form-group">
+                                        <label for="editContactNumber" class="control-label"><b>Contact Number: </b></label>
+                                        <input type="text" class="form-control" id="editContactNumber" placeholder="Contact Number..." name="editContactNumber" autocomplete="off">
+                                    </div> <!-- /form-group-->       
+                                </div> <!-- row -->
+                                
+                                <div class="row">
+                                    <div class="col-sm-4 form-group">
+                                        <label for="editEmail" class="control-label"><b>Email: </b></label>
+                                        <input type="text" class="form-control" id="editEmail" placeholder="Email..." name="editEmail" autocomplete="off">
+                                    </div> <!-- /form-group-->  
+                                    
+                                    <div class="col-sm-4 form-group">
+                                        <label for="editDepartment" class="control-label"><b>Department: </b></label>
+                                        <input type="text" class="form-control" id="editDepartment" placeholder="Department..." name="editDepartment" autocomplete="off">
+                                    </div> <!-- /form-group-->       
+                                </div> <!-- row -->
+                            </form>
                         </div><!--/div-result-->
                     </div> <!-- /modal-body -->
                     <div class="modal-footer">
                         <button type="button" class="btn btn-default" data-dismiss="modal"> <i class="glyphicon glyphicon-remove-sign"></i> Close</button>
                         <button type="submit" class="btn btn-primary" id="createProductBtn" data-loading-text="Loading..." autocomplete="off"> <i class="glyphicon glyphicon-ok-sign"></i> Save Changes</button>
-                    </div> <!-- /modal-footer -->	 
-                                        
+                    </div> <!-- /modal-footer -->	                     
                 </div> <!-- /modal-content -->    
             </div> <!-- /modal-dailog -->
         </div><!-- /modal -->
@@ -657,15 +947,57 @@
 
                     <div class="modal-body" style="max-height:450px; overflow:auto;">  
                         <div class="div-result">
-
-                            
+                            <form class="form-horizontal" id="editPersonalInfo" action="php_action/editProduct.php" method="POST">				    
+                            <br>
+                                <div id="edit-product-messages"></div>
+                                
+                                <div class="row">
+                                    <div class="col-sm-4 form-group">
+                                        <label for="editFirstName" class="control-label"><b>First Name: </b></label>
+                                        <input type="text" class="form-control" id="editFirstName" placeholder="First Name..." name="editFirstName" autocomplete="off">
+                                    </div> <!-- /form-group-->  
+                                    
+                                    <div class="col-sm-4 form-group">
+                                        <label for="editLastName" class="control-label"><b>Last Name: </b></label>
+                                        <input type="text" class="form-control" id="editLastName" placeholder="Last Name..." name="editLastName" autocomplete="off">
+                                    </div> <!-- /form-group-->  
+                                    
+                                    <div class="col-sm-4 form-group">
+                                        <label for="editMiddleName" class="control-label"><b>Middle Name: </b></label>
+                                        <input type="text" class="form-control" id="editLastName" placeholder="Middle Name..." name="editMiddleName" autocomplete="off">
+                                    </div> <!-- /form-group-->  
+                                </div> <!-- row -->
+                                
+                                <div class="row">
+                                    <div class="col-sm-4 form-group">
+                                        <label for="editEmployeeID" class="control-label"><b>Employee ID: </b></label>
+                                        <input type="text" class="form-control" id="editEmployeeID" placeholder="Employee ID..." name="editEmployeeID" autocomplete="off">
+                                    </div> <!-- /form-group-->  
+                                    
+                                    <div class="col-sm-4 form-group">
+                                        <label for="editContactNumber" class="control-label"><b>Contact Number: </b></label>
+                                        <input type="text" class="form-control" id="editContactNumber" placeholder="Contact Number..." name="editContactNumber" autocomplete="off">
+                                    </div> <!-- /form-group-->       
+                                </div> <!-- row -->
+                                
+                                <div class="row">
+                                    <div class="col-sm-4 form-group">
+                                        <label for="editEmail" class="control-label"><b>Email: </b></label>
+                                        <input type="text" class="form-control" id="editEmail" placeholder="Email..." name="editEmail" autocomplete="off">
+                                    </div> <!-- /form-group-->  
+                                    
+                                    <div class="col-sm-4 form-group">
+                                        <label for="editDepartment" class="control-label"><b>Department: </b></label>
+                                        <input type="text" class="form-control" id="editDepartment" placeholder="Department..." name="editDepartment" autocomplete="off">
+                                    </div> <!-- /form-group-->       
+                                </div> <!-- row -->
+                            </form>
                         </div><!--/div-result-->
                     </div> <!-- /modal-body -->
                     <div class="modal-footer">
                         <button type="button" class="btn btn-default" data-dismiss="modal"> <i class="glyphicon glyphicon-remove-sign"></i> Close</button>
                         <button type="submit" class="btn btn-primary" id="createProductBtn" data-loading-text="Loading..." autocomplete="off"> <i class="glyphicon glyphicon-ok-sign"></i> Save Changes</button>
-                    </div> <!-- /modal-footer -->	 
-                                        
+                    </div> <!-- /modal-footer -->	                   
                 </div> <!-- /modal-content -->    
             </div> <!-- /modal-dailog -->
         </div><!-- /modal -->
