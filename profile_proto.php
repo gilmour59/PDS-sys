@@ -408,6 +408,7 @@
 
                     <div class="modal-body" style="max-height:450px; overflow:auto;">  
                         <div class="div-result">
+                            
                             <form class="form-horizontal" id="editProductForm" action="php_action/editProduct.php" method="POST">				    
                             <br>
                                 <div id="edit-product-messages"></div>
@@ -452,8 +453,8 @@
                                         <input type="text" class="form-control" id="editDepartment" placeholder="Department..." name="editDepartment" autocomplete="off">
                                     </div> <!-- /form-group-->       
                                 </div> <!-- row -->
-                                
                             </form>
+                            
                         </div><!--/div-result-->
                     </div> <!-- /modal-body -->
                     <div class="modal-footer">
