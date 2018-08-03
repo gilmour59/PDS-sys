@@ -32,13 +32,25 @@
                         </form>
                     </div>
                     <div class="col-sm-9">
-                        <table class="table table-bordered table-hover">
-                            <tr><td style="width: 30%">Employee Name: </td><td id="empName"></td></tr>
-                            <tr><td>Employee ID: </td><td id="empId"></td></tr>
-                            <tr><td>Contact Number: </td><td id="empContactNum"></td></tr>
-                            <tr><td>Email: </td><td id="empEmail"></td></tr>
-                            <tr><td>Department: </td><td id="empDept"></td></tr>
-                        </table>
+                        <div class="row">
+                            <div class="col-sm-9">
+                                <h3>Employee Information</h3>
+                            </div>
+                            <div class="col-sm-3 text-right">
+                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#employeeInfoModal">
+                                    Edit
+                                </button>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <table class="table table-bordered table-hover">
+                                <tr><td style="width: 30%">Employee Name: </td><td id="empName"></td></tr>
+                                <tr><td>Employee ID: </td><td id="empId"></td></tr>
+                                <tr><td>Contact Number: </td><td id="empContactNum"></td></tr>
+                                <tr><td>Email: </td><td id="empEmail"></td></tr>
+                                <tr><td>Department: </td><td id="empDept"></td></tr>
+                            </table>
+                        </div>
                     </div>
                 </div><!--row(Personal Info)-->                
             </div> <!--/card-body-->
@@ -385,6 +397,73 @@
             <!-- /Vertical Tabs -->
         </div> <!--/card-->
         
+        <!--Employee Info modal-->
+        <div class="modal fade" id="employeeInfoModal" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title"><i class="glyphicon glyphicon-plus-sign"></i> Employee Information</h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    </div>
+
+                    <div class="modal-body" style="max-height:450px; overflow:auto;">  
+                        <div class="div-result">
+                            <form class="form-horizontal" id="editProductForm" action="php_action/editProduct.php" method="POST">				    
+                            <br>
+                                <div id="edit-product-messages"></div>
+                                
+                                <div class="row">
+                                    <div class="col-sm-4 form-group">
+                                        <label for="editFirstName" class="control-label"><b>First Name: </b></label>
+                                        <input type="text" class="form-control" id="editFirstName" placeholder="First Name..." name="editFirstName" autocomplete="off">
+                                    </div> <!-- /form-group-->  
+                                    
+                                    <div class="col-sm-4 form-group">
+                                        <label for="editLastName" class="control-label"><b>Last Name: </b></label>
+                                        <input type="text" class="form-control" id="editLastName" placeholder="Last Name..." name="editLastName" autocomplete="off">
+                                    </div> <!-- /form-group-->  
+                                    
+                                    <div class="col-sm-4 form-group">
+                                        <label for="editMiddleName" class="control-label"><b>Middle Name: </b></label>
+                                        <input type="text" class="form-control" id="editLastName" placeholder="Middle Name..." name="editMiddleName" autocomplete="off">
+                                    </div> <!-- /form-group-->  
+                                </div> <!-- row -->
+                                
+                                <div class="row">
+                                    <div class="col-sm-4 form-group">
+                                        <label for="editEmployeeID" class="control-label"><b>Employee ID: </b></label>
+                                        <input type="text" class="form-control" id="editEmployeeID" placeholder="Employee ID..." name="editEmployeeID" autocomplete="off">
+                                    </div> <!-- /form-group-->  
+                                    
+                                    <div class="col-sm-4 form-group">
+                                        <label for="editContactNumber" class="control-label"><b>Contact Number: </b></label>
+                                        <input type="text" class="form-control" id="editContactNumber" placeholder="Contact Number..." name="editContactNumber" autocomplete="off">
+                                    </div> <!-- /form-group-->       
+                                </div> <!-- row -->
+                                
+                                <div class="row">
+                                    <div class="col-sm-4 form-group">
+                                        <label for="editEmail" class="control-label"><b>Email: </b></label>
+                                        <input type="text" class="form-control" id="editEmail" placeholder="Email..." name="editEmail" autocomplete="off">
+                                    </div> <!-- /form-group-->  
+                                    
+                                    <div class="col-sm-4 form-group">
+                                        <label for="editDepartment" class="control-label"><b>Department: </b></label>
+                                        <input type="text" class="form-control" id="editDepartment" placeholder="Department..." name="editDepartment" autocomplete="off">
+                                    </div> <!-- /form-group-->       
+                                </div> <!-- row -->
+                                
+                            </form>
+                        </div><!--/div-result-->
+                    </div> <!-- /modal-body -->
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal"> <i class="glyphicon glyphicon-remove-sign"></i> Close</button>
+                        <button type="submit" class="btn btn-primary" id="createProductBtn" data-loading-text="Loading..." autocomplete="off"> <i class="glyphicon glyphicon-ok-sign"></i> Save Changes</button>
+                    </div> <!-- /modal-footer -->	                
+                </div> <!-- /modal-content -->    
+            </div> <!-- /modal-dailog -->
+        </div><!-- /modal -->
+        
         <!--Personal Info modal-->
         <div class="modal fade" id="personalInfoModal" tabindex="-1" role="dialog">
             <div class="modal-dialog modal-xl">
@@ -396,14 +475,29 @@
 
                     <div class="modal-body" style="max-height:450px; overflow:auto;">  
                         <div class="div-result">
-                            
+                            <form class="form-horizontal" id="editProductForm" action="php_action/editProduct.php" method="POST">				    
+                            <br>
+                                <div id="edit-product-messages"></div>
+                                <div class="form-group">
+                                    <label for="editFirstName" class="col-sm-3 control-label">First Name: </label>
+                                    <div class="col-sm-4">
+                                      <input type="text" class="form-control" id="editFirstName" placeholder="First Name..." name="editFirstName" autocomplete="off">
+                                    </div>
+                                </div> <!-- /form-group-->  
+                                
+                                <div class="form-group">
+                                    <label for="editLastName" class="col-sm-3 control-label">Last Name: </label>
+                                    <div class="col-sm-4">
+                                      <input type="text" class="form-control" id="editLastName" placeholder="Last Name..." name="editLastName" autocomplete="off">
+                                    </div>
+                                </div> <!-- /form-group-->  
+                            </form>
                         </div><!--/div-result-->
                     </div> <!-- /modal-body -->
                     <div class="modal-footer">
                         <button type="button" class="btn btn-default" data-dismiss="modal"> <i class="glyphicon glyphicon-remove-sign"></i> Close</button>
                         <button type="submit" class="btn btn-primary" id="createProductBtn" data-loading-text="Loading..." autocomplete="off"> <i class="glyphicon glyphicon-ok-sign"></i> Save Changes</button>
-                    </div> <!-- /modal-footer -->	 
-                                        
+                    </div> <!-- /modal-footer -->	                
                 </div> <!-- /modal-content -->    
             </div> <!-- /modal-dailog -->
         </div><!-- /modal -->
@@ -467,7 +561,6 @@
 
                     <div class="modal-body" style="max-height:450px; overflow:auto;">  
                         <div class="div-result">
-
                             
                         </div><!--/div-result-->
                     </div> <!-- /modal-body -->
