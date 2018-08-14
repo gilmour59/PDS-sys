@@ -14,14 +14,14 @@
             
             <!--card-body-->	
             <div class="card-body">
-                <div class="row">
+                <div class="row align-items-center">
                     <div class="col-sm-3">
                         <form action="php_action/editEmployeeImage.php" method="POST" id="updateEmployeeImageForm" enctype="multipart/form-data">
                             <div id="edit-employeePhoto-messages"></div>                            
                             <div class="text-center">
                                 <!-- the avatar markup -->
-                                <div id="kv-avatar-errors-1" class="center-block" style="display:none;"></div>                                           
-                                <div class="kv-avatar center-block">
+                                <div id="kv-avatar-errors-1" style="display:none;"></div>                                           
+                                <div class="kv-avatar">
                                     <div class="file-loading">
                                         <!-- .div-hide to hide. input file to show up when loading-->
                                         <input class="div-hide" id="editEmployeeImage" name="editEmployeeImage" type="file"/>
@@ -115,7 +115,7 @@
                             </div>
                             <div class="col-sm-6">
                                 <table class="table table-bordered table-hover" style="table-layout: fixed;">
-                                    <tr><td style="width:41%;">GSIS ID:</td><td style="width:59%;">Gilmour Almalbis asddddddddsdasdasdasdasdasdasdasdasddddddddddddd asdasd asd asdasdasdasdasd</td></tr>
+                                    <tr><td style="width:41%;">GSIS ID:</td><td style="width:59%;">Gilmour Almalbis </td></tr>
                                     <tr><td>PAGIBIG ID:</td><td></td></tr>
                                     <tr><td>PHILHEALTH:</td><td></td></tr>
                                     <tr><td>SSS:</td><td></td></tr>
@@ -142,23 +142,25 @@
                         <div class="row" >
                             <div class="col-sm-6">
                                 <table class="table table-bordered table-hover" style="table-layout: fixed;">
-                                    <tr><td style="width:35%;">Date of Birth: </td><td style="width:65%;"></td></tr>
-                                    <tr><td>Place of Birth: </td><td></td></tr>
-                                    <tr><td>Sex: </td><td></td></tr>
-                                    <tr><td>Civil Status: </td><td></td></tr>
-                                    <tr><td>Height: </td><td></td></tr>
-                                    <tr><td>Weight: </td><td></td></tr>
-                                    <tr><td>Blood Type: </td><td></td></tr>
+                                    <tr><td style="width:69%;">Spouse Surname: </td><td style="width:65%;"></td></tr>
+                                    <tr><td>Spouse First Name: </td><td></td></tr>
+                                    <tr><td>Spouse Middle Name: </td><td></td></tr>
+                                    <tr><td>Spouse Name Ext: </td><td></td></tr>
+                                    <tr><td>Spouse Occupation: </td><td></td></tr>
+                                    <tr><td>Spouse Employer: </td><td></td></tr>
+                                    <tr><td>Spouse Business Address: </td><td></td></tr>
+                                    <tr><td>Spouse Telephone Number: </td><td></td></tr>
                                 </table>
                             </div>
                             <div class="col-sm-6">
                                 <table class="table table-bordered table-hover" style="table-layout: fixed;">
-                                    <tr><td style="width:41%;">GSIS ID:</td><td style="width:59%;">Gilmour Almalbis asddddddddsdasdasdasdasdasdasdasdasddddddddddddd asdasd asd asdasdasdasdasd</td></tr>
-                                    <tr><td>PAGIBIG ID:</td><td></td></tr>
-                                    <tr><td>PHILHEALTH:</td><td></td></tr>
-                                    <tr><td>SSS:</td><td></td></tr>
-                                    <tr><td>TIN:</td><td></td></tr>
-                                    <tr><td>Agency Employee No:</td><td></td></tr>
+                                    <tr><td style="width:55%;">Father Surname:</td><td style="width:59%;"></td></tr>
+                                    <tr><td>Father First Name:</td><td></td></tr>
+                                    <tr><td>Father Middle Name:</td><td></td></tr>
+                                    <tr><td>Father Name Ext:</td><td></td></tr>
+                                    <tr><td>Mother Maiden Name:</td><td></td></tr>
+                                    <tr><td>Mother First Name:</td><td></td></tr>
+                                    <tr><td>Mother Middle Name:</td><td></td></tr>
                                 </table>
                             </div>
                         </div>
@@ -399,7 +401,7 @@
         
         <!--Employee Info modal-->
         <div class="modal fade" id="employeeInfoModal" tabindex="-1" role="dialog">
-            <div class="modal-dialog modal-xl">
+            <div class="modal-dialog modal-lg">
                 <div class="modal-content">
                     <div class="modal-header">
                         <h4 class="modal-title"><i class="glyphicon glyphicon-plus-sign"></i> Employee Information</h4>
@@ -413,41 +415,48 @@
                                 <div id="edit-product-messages"></div>
                                 
                                 <div class="row">
-                                    <div class="col-sm-4 form-group">
+                                    <div class="col-sm-6 form-group">
                                         <label for="editFirstName" class="control-label"><b>First Name: </b></label>
                                         <input type="text" class="form-control" id="editFirstName" placeholder="First Name..." name="editFirstName" autocomplete="off">
                                     </div> <!-- /form-group-->  
                                     
-                                    <div class="col-sm-4 form-group">
+                                    <div class="col-sm-6 form-group">
                                         <label for="editLastName" class="control-label"><b>Last Name: </b></label>
                                         <input type="text" class="form-control" id="editLastName" placeholder="Last Name..." name="editLastName" autocomplete="off">
-                                    </div> <!-- /form-group-->  
-                                    
-                                    <div class="col-sm-4 form-group">
-                                        <label for="editMiddleName" class="control-label"><b>Middle Name: </b></label>
-                                        <input type="text" class="form-control" id="editLastName" placeholder="Middle Name..." name="editMiddleName" autocomplete="off">
                                     </div> <!-- /form-group-->  
                                 </div> <!-- row -->
                                 
                                 <div class="row">
-                                    <div class="col-sm-4 form-group">
+                                    <div class="col-sm-6 form-group">
+                                        <label for="editMiddleName" class="control-label"><b>Middle Name: </b></label>
+                                        <input type="text" class="form-control" id="editMiddleName" placeholder="Middle Name..." name="editMiddleName" autocomplete="off">
+                                    </div> <!-- /form-group-->  
+                                    
+                                    <div class="col-sm-6 form-group">
+                                        <label for="editNameExt" class="control-label"><b>Name Ext: </b></label>
+                                        <input type="text" class="form-control" id="editNameExt" placeholder="Name Ext..." name="editNameExt" autocomplete="off">
+                                    </div> <!-- /form-group-->  
+                                </div><!-- row -->
+                                
+                                <div class="row">
+                                    <div class="col-sm-6 form-group">
                                         <label for="editEmployeeID" class="control-label"><b>Employee ID: </b></label>
                                         <input type="text" class="form-control" id="editEmployeeID" placeholder="Employee ID..." name="editEmployeeID" autocomplete="off">
                                     </div> <!-- /form-group-->  
                                     
-                                    <div class="col-sm-4 form-group">
+                                    <div class="col-sm-6 form-group">
                                         <label for="editContactNumber" class="control-label"><b>Contact Number: </b></label>
                                         <input type="text" class="form-control" id="editContactNumber" placeholder="Contact Number..." name="editContactNumber" autocomplete="off">
                                     </div> <!-- /form-group-->       
                                 </div> <!-- row -->
                                 
                                 <div class="row">
-                                    <div class="col-sm-4 form-group">
+                                    <div class="col-sm-6 form-group">
                                         <label for="editEmail" class="control-label"><b>Email: </b></label>
                                         <input type="text" class="form-control" id="editEmail" placeholder="Email..." name="editEmail" autocomplete="off">
                                     </div> <!-- /form-group-->  
                                     
-                                    <div class="col-sm-4 form-group">
+                                    <div class="col-sm-6 form-group">
                                         <label for="editDepartment" class="control-label"><b>Department: </b></label>
                                         <input type="text" class="form-control" id="editDepartment" placeholder="Department..." name="editDepartment" autocomplete="off">
                                     </div> <!-- /form-group-->       
@@ -465,7 +474,7 @@
         
         <!--Personal Info modal-->
         <div class="modal fade" id="personalInfoModal" tabindex="-1" role="dialog">
-            <div class="modal-dialog modal-xl">
+            <div class="modal-dialog modal-lg">
                 <div class="modal-content">
                     <div class="modal-header">
                         <h4 class="modal-title"><i class="glyphicon glyphicon-plus-sign"></i> Personal Information</h4>
@@ -480,7 +489,7 @@
                                 
                                 <div class="row">
                                     <div class="col-sm-4 form-group">
-                                        <label for="editFirstName" class="control-label"><b>Date of Birth: </b></label>
+                                        <label for="editDateBirth" class="control-label"><b>Date of Birth: </b></label>
                                         <input type="date" class="form-control" id="editDateBirth" name="editDateBirth" autocomplete="off">
                                     </div> <!-- /form-group-->  
                                     
@@ -491,7 +500,7 @@
                                     
                                     <div class="col-sm-4 form-group">
                                         <label for="editSex" class="control-label"><b>Sex: </b></label>
-                                        <div>
+                                        <div class="align-content-center text-center">
                                             <div class="form-check-inline">
                                                 <label class="form-check-label">
                                                     <input type="radio" class="form-check-input" name="editSex" value="male" checked>Male 
@@ -504,6 +513,29 @@
                                             </div>
                                         </div>
                                     </div> <!-- /form-group-->  
+                                </div> <!-- row -->
+                                
+                                <div class="row">
+                                    <div class="col-sm-6 form-group">
+                                        <label for="editCivilStatus" class="control-label"><b>Civil Status: </b></label>
+                                        <select class="form-control" id="editCivilStatus">
+                                            <option>Single</option>
+                                            <option>Married</option>
+                                            <option>Divorced</option>
+                                            <option>Widowed</option>
+                                        </select>
+                                    </div> <!-- /form-group-->  
+                                    
+                                    <div class="col-sm-6 form-group">
+                                        <label for="editHeight" class="control-label"><b>Height: </b></label>
+                                        <input type="text" class="form-control" id="editHeight" placeholder="Place of Birth..." name="editPlaceBirth" autocomplete="off">
+                                    </div> <!-- /form-group-->  
+                                    
+                                    <div class="col-sm-4 form-group">
+                                        <label for="editPlaceBirth" class="control-label"><b>Weight: </b></label>
+                                        <input type="text" class="form-control" id="editPlaceBirth" placeholder="Place of Birth..." name="editPlaceBirth" autocomplete="off">
+                                    </div> <!-- /form-group-->  
+                                    
                                 </div> <!-- row -->
                                 
                                 <div class="row">
@@ -557,24 +589,24 @@
                                 
                                 <div class="row">
                                     <div class="col-sm-4 form-group">
-                                        <label for="editFirstName" class="control-label"><b>First Name: </b></label>
-                                        <input type="text" class="form-control" id="editFirstName" placeholder="First Name..." name="editFirstName" autocomplete="off">
+                                        <label for="editSpouseSurname" class="control-label"><b>Spouse Surname: </b></label>
+                                        <input type="text" class="form-control" id="editSpouseSurname" placeholder="Spouse Surname..." name="editSpouseSurname" autocomplete="off">
                                     </div> <!-- /form-group-->  
                                     
                                     <div class="col-sm-4 form-group">
-                                        <label for="editLastName" class="control-label"><b>Last Name: </b></label>
-                                        <input type="text" class="form-control" id="editLastName" placeholder="Last Name..." name="editLastName" autocomplete="off">
+                                        <label for="editSpouseFirstName" class="control-label"><b>Spouse First Name: </b></label>
+                                        <input type="text" class="form-control" id="editSpouseFirstName" placeholder="Spouse First Name..." name="editSpouseFirstName" autocomplete="off">
                                     </div> <!-- /form-group-->  
                                     
                                     <div class="col-sm-4 form-group">
-                                        <label for="editMiddleName" class="control-label"><b>Middle Name: </b></label>
-                                        <input type="text" class="form-control" id="editLastName" placeholder="Middle Name..." name="editMiddleName" autocomplete="off">
+                                        <label for="editSpouseMiddleName" class="control-label"><b>Spouse Middle Name: </b></label>
+                                        <input type="text" class="form-control" id="editSpouseMiddleName" placeholder="Spouse Middle Name..." name="editSpouseMiddleName" autocomplete="off">
                                     </div> <!-- /form-group-->  
                                 </div> <!-- row -->
                                 
                                 <div class="row">
                                     <div class="col-sm-4 form-group">
-                                        <label for="editEmployeeID" class="control-label"><b>Employee ID: </b></label>
+                                        <label for="editSpouseNameExt" class="control-label"><b>Employee ID: </b></label>
                                         <input type="text" class="form-control" id="editEmployeeID" placeholder="Employee ID..." name="editEmployeeID" autocomplete="off">
                                     </div> <!-- /form-group-->  
                                     
