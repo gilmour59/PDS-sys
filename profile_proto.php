@@ -86,11 +86,10 @@
                     </li>
                 </ul>
                 
-                <div class="tab-content w-100 p-3">
-                    
+                <div class="tab-content w-100">
                     <!-- Personal Information TAB -->
                     <div class="tab-pane fade show active" id="personalInformation" role="tabpanel">
-                        <div class="row">
+                        <div class="row p-2">
                             <div class="col-sm-9">
                                 <h3>Personal Information</h3>
                             </div>
@@ -128,47 +127,65 @@
                     
                     <!-- Family Background TAB -->
                     <div class="tab-pane fade" id="familyBackground" role="tabpanel">
-                        <div class="row">
-                            <div class="col-sm-9">
-                                <h3>Family Background</h3>
+                        
+                        <ul class="nav nav-tabs justify-content-center" role="tablist">
+                            <li class="nav-item">
+                              <a class="nav-link active" href="#viewSpouseParents" role="tab" data-toggle="tab">Spouse and Parents</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="#viewChildren" role="tab" data-toggle="tab">Children</a>
+                            </li>
+                          </ul>
+                        
+                        <div class="tab-content p-2">
+                            <div id="viewSpouseParents" class="tab-pane fade show active" role="tabpanel">
+                                <div class="row p-2">
+                                    <div class="col-sm-9">
+                                        <h3>Family Background</h3>
+                                    </div>
+                                    <div class="col-sm-3 text-right">
+                                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#familyBackgroundModal">
+                                            Edit
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <div class="row" >
+                                    <div class="col-sm-6">
+                                        <table class="table table-bordered table-hover" style="table-layout: fixed;">
+                                            <tr><td style="width:69%;">Spouse Surname: </td><td style="width:65%;"></td></tr>
+                                            <tr><td>Spouse First Name: </td><td></td></tr>
+                                            <tr><td>Spouse Middle Name: </td><td></td></tr>
+                                            <tr><td>Spouse Name Ext: </td><td></td></tr>
+                                            <tr><td>Spouse Occupation: </td><td></td></tr>
+                                            <tr><td>Spouse Employer: </td><td></td></tr>
+                                            <tr><td>Spouse Business Address: </td><td></td></tr>
+                                            <tr><td>Spouse Telephone Number: </td><td></td></tr>
+                                        </table>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <table class="table table-bordered table-hover" style="table-layout: fixed;">
+                                            <tr><td style="width:55%;">Father Surname:</td><td style="width:59%;"></td></tr>
+                                            <tr><td>Father First Name:</td><td></td></tr>
+                                            <tr><td>Father Middle Name:</td><td></td></tr>
+                                            <tr><td>Father Name Ext:</td><td></td></tr>
+                                            <tr><td>Mother Maiden Name:</td><td></td></tr>
+                                            <tr><td>Mother First Name:</td><td></td></tr>
+                                            <tr><td>Mother Middle Name:</td><td></td></tr>
+                                        </table>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="col-sm-3 text-right">
-                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#familyBackgroundModal">
-                                    Edit
-                                </button>
+                            <div id="viewChildren" class="tab-pane fade" role="tabpanel">
+                                
                             </div>
                         </div>
                         
-                        <div class="row" >
-                            <div class="col-sm-6">
-                                <table class="table table-bordered table-hover" style="table-layout: fixed;">
-                                    <tr><td style="width:69%;">Spouse Surname: </td><td style="width:65%;"></td></tr>
-                                    <tr><td>Spouse First Name: </td><td></td></tr>
-                                    <tr><td>Spouse Middle Name: </td><td></td></tr>
-                                    <tr><td>Spouse Name Ext: </td><td></td></tr>
-                                    <tr><td>Spouse Occupation: </td><td></td></tr>
-                                    <tr><td>Spouse Employer: </td><td></td></tr>
-                                    <tr><td>Spouse Business Address: </td><td></td></tr>
-                                    <tr><td>Spouse Telephone Number: </td><td></td></tr>
-                                </table>
-                            </div>
-                            <div class="col-sm-6">
-                                <table class="table table-bordered table-hover" style="table-layout: fixed;">
-                                    <tr><td style="width:55%;">Father Surname:</td><td style="width:59%;"></td></tr>
-                                    <tr><td>Father First Name:</td><td></td></tr>
-                                    <tr><td>Father Middle Name:</td><td></td></tr>
-                                    <tr><td>Father Name Ext:</td><td></td></tr>
-                                    <tr><td>Mother Maiden Name:</td><td></td></tr>
-                                    <tr><td>Mother First Name:</td><td></td></tr>
-                                    <tr><td>Mother Middle Name:</td><td></td></tr>
-                                </table>
-                            </div>
-                        </div>
                     </div>
                     
                     <!-- Educational Background TAB -->
                     <div class="tab-pane fade" id="educationalBackground" role="tabpanel">
-                        <div class="row">
+                        <div class="row p-2">
                             <div class="col-sm-9">
                                 <h3>Educational Background</h3>
                             </div>
@@ -206,7 +223,7 @@
                     
                     <!-- Civil Service TAB -->
                     <div class="tab-pane fade" id="civilService" role="tabpanel">
-                        <div class="row">
+                        <div class="row p-2">
                             <div class="col-sm-9">
                                 <h3>Civil Service</h3>
                             </div>
@@ -244,7 +261,7 @@
                     
                     <!-- Work Experience TAB -->
                     <div class="tab-pane fade" id="workExperience" role="tabpanel">
-                        <div class="row">
+                        <div class="row p-2">
                             <div class="col-sm-9">
                                 <h3>Work Experience</h3>
                             </div>
@@ -282,7 +299,7 @@
                     
                     <!-- Voluntary Work TAB -->
                     <div class="tab-pane fade" id="voluntaryWork" role="tabpanel">
-                        <div class="row">
+                        <div class="row p-2">
                             <div class="col-sm-9">
                                 <h3>Voluntary Work</h3>
                             </div>
@@ -320,7 +337,7 @@
                     
                     <!-- Learning Development TAB -->
                     <div class="tab-pane fade" id="learningDevelopment" role="tabpanel">
-                        <div class="row">
+                        <div class="row p-2">
                             <div class="col-sm-9">
                                 <h3>Learning Development</h3>
                             </div>
@@ -358,7 +375,7 @@
                     
                     <!-- Other Info TAB -->
                     <div class="tab-pane fade" id="otherInformation" role="tabpanel">
-                        <div class="row">
+                        <div class="row p-2">
                             <div class="col-sm-9">
                                 <h3>Other Information</h3>
                             </div>
